@@ -22,7 +22,7 @@
 
     - ##### 实现结果示例：生成矩阵，保存至二维数组，并进行可视化。
 
-      ![IDW插值结果示例图](img/IDW插值结果示例图.jpeg)
+      https://github.com/kanvina/GIS_about/raw/master/![IDW插值结果示例图](img/IDW插值结果示例图.jpeg)
 
       
 
