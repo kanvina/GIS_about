@@ -211,7 +211,7 @@ def draw_contour(location_list):
     plt.plot(x_list, y_list)
     plt.xlim(0, 1000)
     plt.ylim(0, 1000)
-    plt.show()
+
 
 
 def run_get_contour(target_value,data_tif_info,data_array):
@@ -288,12 +288,13 @@ def run_get_contour(target_value,data_tif_info,data_array):
             location_list.append(point_location)
         points_location_list.append(location_list)
         draw_contour(location_list)
+    plt.show()
 
     pd.DataFrame(points_location_list).to_excel('data_out/{0}等值线拐点坐标.xls'.format(target_value), index=0, header=0)
 
 if __name__=="__main__":
 
-    target_value=250
+    target_value=400
     data_tif_info=\
         {
             'min_x':0,
@@ -304,6 +305,7 @@ if __name__=="__main__":
         }
 
     data_array=np.array(pd.read_excel('data_out/data_IDW.xls'))
+
 
     run_get_contour(target_value, data_tif_info, data_array)
 
