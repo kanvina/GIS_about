@@ -8,10 +8,11 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
+#从xls提取数据
 def get_array_excel(path):
     data_arr=np.array(pd.read_excel(path))
     return data_arr
-
+#获取数据范围
 def get_range(data_arr):
     min_x=np.min(data_arr[:,0])
     max_x=np.max(data_arr[:,0])
@@ -20,17 +21,19 @@ def get_range(data_arr):
     max_y = np.max(data_arr[:, 1])
     data_range=[min_x,max_x,min_y,max_y]
     return data_range
-
+#网格范围
 def get_grid_size(range,cell_len):
     row_size= int((range[3]-range[2])/cell_len)
     column_size= int((range[1]-range[0])/cell_len)
     return row_size,column_size
-
+#获取中心点坐标
 def get_cell_center(row_i,column_i,cell_len,data_range):
     x_center=(column_i*cell_len)+(cell_len/2)
     y_center=data_range[3]-(row_i*cell_len)-(cell_len/2)
     center_loction=[x_center,y_center]
     return center_loction
+#
+
 
 def get_z(data_arr,center_loction,p):
     distance_list =[]

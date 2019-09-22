@@ -9,6 +9,11 @@ import matplotlib.pyplot as plt
 
 
 def get_data_node_array(data_array):
+    '''
+    生成扩展数组
+    :param data_array: 二维数组
+    :return:
+    '''
     data_size=np.shape(data_array)
 
     data_add_up=np.array([data_array[0,:]])
@@ -22,6 +27,13 @@ def get_data_node_array(data_array):
     return data_array_add
 
 def get_horizontal_line_info(data_array_add,target_value,data_tif_info):
+    '''
+    水平线信息集合
+    :param data_array_add: 二维数组
+    :param target_value:目标值
+    :param data_tif_info: 栅格信息
+    :return:
+    '''
     dict_horizontal_line={}
     r_xize,c_size=np.shape(data_array_add)
     c_size=c_size-1
@@ -54,6 +66,13 @@ def get_horizontal_line_info(data_array_add,target_value,data_tif_info):
     return dict_horizontal_line
 
 def get_vertical_line_info(data_array_add,target_value,data_tif_info):
+    '''
+    竖直线信息集合
+    :param data_array_add:
+    :param target_value:
+    :param data_tif_info:
+    :return: dict[[row_i,column_i],data_value[left,right],is_cross,location_list]
+    '''
     dict_vertical_line={}
     r_xize,c_size=np.shape(data_array_add)
     r_xize=r_xize-1
@@ -86,6 +105,13 @@ def get_vertical_line_info(data_array_add,target_value,data_tif_info):
     return dict_vertical_line
 
 def get_next(point_name,dict_all_point,last_point):
+    '''
+    追踪寻找下一拐点
+    :param point_name: 当前拐点名称
+    :param dict_all_point: 拐点集合汇总
+    :param last_point: 上一拐点名称
+    :return:
+    '''
     all_close_points = []
 
     if str(point_name).find('h') !=-1:
@@ -188,10 +214,86 @@ def draw_contour(location_list):
     plt.show()
 
 
+def run_get_contour(target_value,data_tif_info,data_array):
+    data_array_add = get_data_node_array(data_array)
+    dict_horizontal_line = get_horizontal_line_info(data_array_add, target_value, data_tif_info)
+    dict_vertical_line = get_vertical_line_info(data_array_add, target_value, data_tif_info)
+    dict_taget_point_h = {}
+    dict_taget_point_v = {}
+
+    '''
+    筛选竖直线与水平线上所有拐点集合，并合并为dict_all_point
+    '''
+    for h_name in dict_horizontal_line:
+        horizontal_line_list = dict_horizontal_line[h_name]
+
+        r_c = horizontal_line_list[0]
+        is_cross = horizontal_line_list[2]
+        location_x_y = horizontal_line_list[3]
+
+        if is_cross == False:
+            if len(location_x_y) > 0:
+                dict_taget_point_h[h_name] = [r_c, location_x_y, is_cross]
+    for v_name in dict_vertical_line:
+        vertical_line_list = dict_vertical_line[v_name]
+
+        r_c = vertical_line_list[0]
+        is_cross = vertical_line_list[2]
+        location_x_y = vertical_line_list[3]
+
+        if is_cross == False:
+            if len(location_x_y) > 0:
+                dict_taget_point_v[v_name] = [r_c, location_x_y, is_cross]
+    dict_taget_point_h.update(dict_taget_point_v)
+    dict_all_point = dict_taget_point_h
+
+    contour_all_list = []
+    '''
+    遍历，生成等值线拐点集合名称，至is_cross均为true
+    '''
+    for taget_point_name in dict_all_point:
+
+        taget_point_info = dict_all_point[taget_point_name]
+        is_cross = taget_point_info[2]
+        if is_cross == False:
+            contour_list = []
+            is_end = 0
+            last_point = ''
+            now_point = taget_point_name
+            contour_list.append(now_point)
+
+            while is_end == 0:
+                try:
+                    next_point = get_next(now_point, dict_all_point, last_point)
+                except:
+                    print('包含开等值线')
+
+                if next_point not in contour_list:
+                    contour_list.append(next_point)
+                    last_point = now_point
+                    now_point = next_point
+                else:
+                    contour_list.append(next_point)
+                    contour_all_list.append(contour_list)
+                    is_end = 1
+
+    '''
+    获取所有等值线拐点坐标
+    '''
+    points_location_list = []
+    for points_name_list in contour_all_list:
+        location_list = []
+        for point_name in points_name_list:
+            point_location = dict_all_point[point_name][1]
+            location_list.append(point_location)
+        points_location_list.append(location_list)
+        draw_contour(location_list)
+
+    pd.DataFrame(points_location_list).to_excel('data_out/{0}等值线拐点坐标.xls'.format(target_value), index=0, header=0)
+
 if __name__=="__main__":
 
-    target_value=350
-
+    target_value=250
     data_tif_info=\
         {
             'min_x':0,
@@ -201,79 +303,10 @@ if __name__=="__main__":
             'cell_len':10
         }
 
-
     data_array=np.array(pd.read_excel('data_out/data_IDW.xls'))
-    data_array_add=get_data_node_array(data_array)
-    dict_horizontal_line=get_horizontal_line_info(data_array_add,target_value,data_tif_info)
-    dict_vertical_line=get_vertical_line_info(data_array_add,target_value,data_tif_info)
-    dict_taget_point_h = {}
-    dict_taget_point_v = {}
 
-    for h_name in dict_horizontal_line:
-        horizontal_line_list=dict_horizontal_line[h_name]
+    run_get_contour(target_value, data_tif_info, data_array)
 
-        r_c=horizontal_line_list[0]
-        is_cross=horizontal_line_list[2]
-        location_x_y=horizontal_line_list[3]
-
-        if is_cross ==False:
-            if len(location_x_y) >0:
-                dict_taget_point_h[h_name]=[r_c,location_x_y,is_cross]
-    for v_name in dict_vertical_line:
-        vertical_line_list=dict_vertical_line[v_name]
-
-        r_c=vertical_line_list[0]
-        is_cross=vertical_line_list[2]
-        location_x_y=vertical_line_list[3]
-
-        if is_cross ==False:
-            if len(location_x_y) >0:
-                dict_taget_point_v[v_name]=[r_c,location_x_y,is_cross]
-
-    dict_taget_point_h.update(dict_taget_point_v)
-    dict_all_point=dict_taget_point_h
-
-    contour_all_list=[]
-
-    for taget_point_name in dict_all_point:
-
-        taget_point_info=dict_all_point[taget_point_name]
-        is_cross=taget_point_info[2]
-        if is_cross == False:
-            contour_list = []
-            is_end=0
-            last_point = ''
-            now_point = taget_point_name
-            contour_list.append(now_point)
-
-            while is_end ==0:
-                try:
-                    next_point=get_next(now_point,dict_all_point,last_point)
-                except:
-                    print('包含开等值线')
-
-
-                if next_point not in contour_list:
-                    contour_list.append(next_point)
-                    last_point=now_point
-                    now_point=next_point
-                else:
-                    contour_list.append(next_point)
-                    contour_all_list.append(contour_list)
-                    is_end=1
-
-
-    points_location_list=[]
-    for points_name_list in contour_all_list:
-        location_list=[]
-        for point_name in points_name_list:
-            point_location=dict_all_point[point_name][1]
-            location_list.append(point_location)
-        points_location_list.append(location_list)
-        draw_contour(location_list)
-
-
-    pd.DataFrame(points_location_list).to_excel('data_out/{0}等值线拐点坐标.xls'.format(target_value),index=0,header=0)
 
 
 
