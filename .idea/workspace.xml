@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="87ff33e6-3b62-4dbb-b2dd-a329db8fdf7c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/GIS_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GIS_test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contour.py" beforeDir="false" afterPath="$PROJECT_DIR$/contour.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
-    </list>
+    <list default="true" id="87ff33e6-3b62-4dbb-b2dd-a329db8fdf7c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,11 +10,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/contour.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="290" column="14" selection-start-line="290" selection-start-column="14" selection-end-line="290" selection-end-column="14" />
+            <state relative-caret-position="190">
+              <caret line="296" column="20" selection-start-line="296" selection-start-column="20" selection-end-line="296" selection-end-column="20" />
               <folding>
                 <element signature="e#46#64#0" expanded="true" />
               </folding>
@@ -28,11 +22,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/IDW.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-171">
-              <caret line="33" column="25" lean-forward="true" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+            <state relative-caret-position="76">
+              <caret line="46" column="40" lean-forward="true" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
               <folding>
                 <element signature="e#47#65#0" expanded="true" />
               </folding>
@@ -132,7 +126,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.contour">
+  <component name="RunManager" selected="Python.IDW">
     <configuration name="IDW" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="GIS_test" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -198,8 +192,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.contour" />
         <item itemvalue="Python.IDW" />
+        <item itemvalue="Python.contour" />
         <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
@@ -268,22 +262,22 @@
       </provider>
     </entry>
     <entry file="file://D:/Professional software/anaconda/Lib/site-packages/numpy/core/_methods.py" />
-    <entry file="file://$PROJECT_DIR$/IDW.py">
+    <entry file="file://$PROJECT_DIR$/contour.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-171">
-          <caret line="33" column="25" lean-forward="true" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+        <state relative-caret-position="190">
+          <caret line="296" column="20" selection-start-line="296" selection-start-column="20" selection-end-line="296" selection-end-column="20" />
           <folding>
-            <element signature="e#47#65#0" expanded="true" />
+            <element signature="e#46#64#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/contour.py">
+    <entry file="file://$PROJECT_DIR$/IDW.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="290" column="14" selection-start-line="290" selection-start-column="14" selection-end-line="290" selection-end-column="14" />
+        <state relative-caret-position="76">
+          <caret line="46" column="40" lean-forward="true" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
           <folding>
-            <element signature="e#46#64#0" expanded="true" />
+            <element signature="e#47#65#0" expanded="true" />
           </folding>
         </state>
       </provider>
