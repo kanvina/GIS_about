@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87ff33e6-3b62-4dbb-b2dd-a329db8fdf7c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/井网构造实验.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/GIS_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GIS_test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/井网构造实验.py" beforeDir="false" afterPath="$PROJECT_DIR$/井网构造实验.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/井网构造实验.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-48">
-              <caret line="47" column="114" lean-forward="true" selection-start-line="47" selection-start-column="114" selection-end-line="47" selection-end-column="114" />
+            <state relative-caret-position="395">
+              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
               <folding>
                 <element signature="e#153#171#0" expanded="true" />
               </folding>
@@ -62,7 +64,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="width" value="981" />
     <option name="height" value="788" />
   </component>
@@ -77,18 +79,13 @@
         <subPane>
           <expand>
             <path>
-              <item name="GIS_about" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GIS_about" type="462c0819:PsiDirectoryNode" />
+              <item name="GIS_test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GIS_test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="GIS_about" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GIS_about" type="462c0819:PsiDirectoryNode" />
+              <item name="GIS_test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GIS_test" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GIS_about" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GIS_about" type="462c0819:PsiDirectoryNode" />
-              <item name="data_out" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -97,7 +94,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.updates" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -224,15 +221,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.110119045" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.07263752" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.22786885" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2277628" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3852459" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -293,8 +290,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/井网构造实验.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-48">
-          <caret line="47" column="114" lean-forward="true" selection-start-line="47" selection-start-column="114" selection-end-line="47" selection-end-column="114" />
+        <state relative-caret-position="395">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
           <folding>
             <element signature="e#153#171#0" expanded="true" />
           </folding>
