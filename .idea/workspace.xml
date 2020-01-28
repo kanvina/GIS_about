@@ -5,7 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/GIS_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GIS_test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/井网构造实验.py" beforeDir="false" afterPath="$PROJECT_DIR$/井网构造实验.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IDW.py" beforeDir="false" afterPath="$PROJECT_DIR$/IDW.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,12 +16,12 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/井网构造实验.py">
+        <entry file="file://$PROJECT_DIR$/IDW.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+            <state relative-caret-position="161">
+              <caret line="94" column="13" lean-forward="true" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
               <folding>
-                <element signature="e#153#171#0" expanded="true" />
+                <element signature="e#508#634#0" />
               </folding>
             </state>
           </provider>
@@ -58,9 +58,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/IDW.py" />
         <option value="$PROJECT_DIR$/contour.py" />
         <option value="$PROJECT_DIR$/井网构造实验.py" />
+        <option value="$PROJECT_DIR$/IDW.py" />
       </list>
     </option>
   </component>
@@ -74,23 +74,23 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="GIS_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GIS_test" type="462c0819:PsiDirectoryNode" />
+              <item name="GIS_about" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GIS_about" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="GIS_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GIS_test" type="462c0819:PsiDirectoryNode" />
+              <item name="GIS_about" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GIS_about" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -113,7 +113,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.井网构造实验">
+  <component name="RunManager" selected="Python.IDW">
     <configuration name="井网构造实验" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="GIS_test" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -200,8 +200,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.井网构造实验" />
         <item itemvalue="Python.IDW" />
+        <item itemvalue="Python.井网构造实验" />
         <item itemvalue="Python.contour" />
         <item itemvalue="Python.test" />
       </list>
@@ -221,15 +221,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.07263752" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16145833" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2277628" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.26229507" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3852459" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -268,16 +268,6 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/test.py" />
     <entry file="file://D:/Professional software/anaconda/Lib/site-packages/numpy/core/_methods.py" />
-    <entry file="file://$PROJECT_DIR$/IDW.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="46" column="40" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
-          <folding>
-            <element signature="e#47#65#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/contour.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-399">
@@ -290,10 +280,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/井网构造实验.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+        <state relative-caret-position="167">
+          <caret line="41" column="95" selection-start-line="41" selection-start-column="95" selection-end-line="41" selection-end-column="95" />
           <folding>
             <element signature="e#153#171#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/data_IDW.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDW.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="94" column="13" lean-forward="true" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
+          <folding>
+            <element signature="e#508#634#0" />
           </folding>
         </state>
       </provider>
